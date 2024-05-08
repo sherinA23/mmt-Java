@@ -1,10 +1,10 @@
-package com.example.mmt;
+package com.poc.makemytrip;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MmtApplicationTests {
+class MakemytripApplicationTests {
 
 	@Test
 	void contextLoads() {

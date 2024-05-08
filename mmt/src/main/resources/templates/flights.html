@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+</head>
+
+<body>
+<div>
+  <p><a href="/logout" style="float: right;">Logout</a></p>
+</div>
+<p>
+  <form action="/flights/add" method="get">
+    <button type="submit"> Add flights </button>
+  </form>
+</p>
+
+<p>
+  <form action="/flights/search" method="get">
+    <button type="submit"> Search Flights </button>
+  </form>
+</p>
+
+<p>
+  <form action="/flights/myBookings" method="get">
+    <button type="submit"> My Bookings </button>
+  </form>
+</p>
+</body>
+</html>

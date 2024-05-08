@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Flight</title>
+</head>
+<body>
+<form method="post" role="form" th:action="@{/booking/new}" >
+<div class="row" id="flights-form">
+  <div class="col-md-8 col-md-offset-2" style="margin-top:30px;">
+    <table class="styled-table table table-striped table-bordered">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Flight ID</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Seats Available</th>
+        <th>Date</th>
+        <th>Departure</th>
+        <th>Arrival</th>
+        <th>Price</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="flight : ${flights}">
+        <td><input type="radio" id=${flight.ID} name="id" th:value="${flight.ID}"></td>
+        <td th:text="${flight.ID}"></td>
+        <td th:text="${flight.source}"></td>
+        <td th:text="${flight.destination}"></td>
+        <td th:text="${flight.availability}"></td>
+        <td th:text="${flight.date}"></td>
+        <td th:text="${flight.departure}"></td>
+        <td th:text="${flight.arrival}"></td>
+        <td th:text="${flight.price}"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Book</button>
+  </div>
+</form>
+</body>
+</html>

@@ -1,13 +1,16 @@
-package com.example.mmt;
+package com.poc.makemytrip;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.sql.*;
+
+
 @SpringBootApplication
-public class MmtApplication {
+public class MakemytripApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MmtApplication.class, args);
+		SpringApplication.run(MakemytripApplication.class, args);
 	}
 
 }

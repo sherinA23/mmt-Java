@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Flight</title>
+</head>
+<body>
+<form method="post" role="form" th:action="@{create}" >
+    <p>
+        <label class="form-label">Aircraft Name:</label>
+        <input class="form-control" id="aircraftID" placeholder="Enter aircraft name" th:field="*{aircraft.aircraftID}" type="text"/>
+    <p th:errors = "*{aircraftID}" class="text-danger" th:if="${#fields.hasErrors('aircraft.aircraftID')}"></p>
+    </p>
+
+    <p>
+        <label class="form-label">Capacity:</label>
+        <input class="form-control" id="capacity" placeholder="Enter capacity" th:field="*{aircraft.capacity}" type="text"/>
+    <p th:errors = "*{capacity}" class="text-danger" th:if="${#fields.hasErrors('aircraft.capacity')}"></p>
+    </p>
+
+    <p>
+        <label class="form-label">Source:</label>
+        <input class="form-control" id="source" placeholder="Enter source" th:field="*{flight.source}" type="text"/>
+    <p th:errors = "*{source}" class="text-danger" th:if="${#fields.hasErrors('flight.source')}"></p>
+    </p>
+
+    <p>
+        <label class="form-label">Destination:</label>
+        <input class="form-control" id="destination" placeholder="Enter destination" th:field="*{flight.destination}" type="text"/>
+    <p th:errors = "*{destination}" class="text-danger" th:if="${#fields.hasErrors('flight.destination')}"></p>
+    </p>
+
+    <p>
+        <label class="form-label">Seats Available:</label>
+        <input class="form-control" id="availability" placeholder="Enter availability" th:field="*{flight.availability}" type="text"/>
+    <p th:errors = "*{availability}" class="text-danger" th:if="${#fields.hasErrors('flight.availability')}"></p>
+    </p>
+
+    <p>
+        <label class="form-label">Date:</label>
+        <input class="form-control" id="date" placeholder="Enter date" th:field="*{flight.date}" type="date"/>
+    <p th:errors = "*{date}" class="text-danger" th:if="${#fields.hasErrors('flight.date')}"></p>
+    </p>
+
+    <p>
+        <label class="form-label">Arrival:</label>
+        <input class="form-control" id="arrival" placeholder="Enter arrival" th:field="*{flight.arrival}" type="time"/>
+    <p th:errors = "*{arrival}" class="text-danger" th:if="${#fields.hasErrors('flight.arrival')}"></p>
+    </p>
+
+    <p>
+        <label class="form-label">Departure:</label>
+        <input class="form-control" id="departure" placeholder="Enter departure" th:field="*{flight.departure}" type="time"/>
+    <p th:errors = "*{departure}" class="text-danger" th:if="${#fields.hasErrors('flight.departure')}"></p>
+    </p>
+
+    <p>
+        <label class="form-label">Price:</label>
+        <input class="form-control" id="price" placeholder="Enter price" th:field="*{flight.price}" type="text"/>
+    <p th:errors = "*{price}" class="text-danger" th:if="${#fields.hasErrors('flight.price')}"></p>
+    </p>
+
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Add</button>
+        <br><br>
+    </div>
+
+</form>
+</body>
+</html>

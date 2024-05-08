@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Flight</title>
+</head>
+<script>
+  $(function () {
+    $("#datepicker").datepicker();
+  });
+</script>
+<body>
+<form id= "dataForm" method="post" role="form" th:action="@{search}" >
+  <p>
+    <label class="form-label">Source:</label>
+    <input class="form-control" id="source" placeholder="Enter source" name="source" type="text"/>
+  </p>
+
+  <p>
+    <label class="form-label">Destination:</label>
+    <input class="form-control" id="destination" placeholder="Enter destination" name="destination" type="text"/>
+  </p>
+
+    <p>
+        <label class="form-label">Date:</label>
+        <input class="form-control" id="datepicker" placeholder="Enter date" name="date" type="date"/>
+    </p>
+
+  <p>
+    <label class="form-label">Number of Passengers:</label>
+    <input class="form-control" id="capacity" placeholder="Enter number of passengers" name="no_of_passengers" type="text"/>
+  </p>
+
+
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Search</button>
+<!--    <button class="btn btn-primary" type="submit" formtarget="iframe_a">Search</button>-->
+    <br><br>
+  </div>
+</form>
+<!--<iframe id="dataIframe" th:src="${iframeSrc}" name="iframe_a" height="300px" width="100%" title="Search Result">-->
+<!--</iframe>-->
+<!--<script th:inline="javascript">-->
+<!--  document.getElementById('dataForm').addEventListener('submit', function (event)-->
+<!--  {-->
+<!--    event.preventDefault();-->
+<!--    var formData = new FormData(this);-->
+<!--    var data = formData.get('data');-->
+<!--    fetch('/flights/search', {-->
+<!--      method: 'POST',-->
+<!--      body: JSON.stringify(({data: data})),-->
+<!--      headers: {-->
+<!--        'Content-Type': 'application/json',-->
+<!--      },-->
+<!--    })-->
+<!--            .then(function (response) {-->
+<!--              return response.text();-->
+<!--            })-->
+<!--            .then(function (data) {-->
+<!--              document.getElementById('dataIframe').srcdoc = data;-->
+<!--            });-->
+<!--  });-->
+<!--</script>-->
+</body>
+</html>
